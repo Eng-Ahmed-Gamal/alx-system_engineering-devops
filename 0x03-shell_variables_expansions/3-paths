@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $PATH | tr -cd ':' | wc -c
+IFS=":" read -ra DIRS <<< "$PATH"; echo "There are ${#DIRS[@]} directories in the PATH."
