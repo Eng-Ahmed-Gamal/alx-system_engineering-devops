@@ -1,2 +1,2 @@
 #!/bin/bash
-sed 's/\(.\).*/\1/' | tr -d '\n'
+awk '{ printf substr($0,1,1) }' | tr '\n'
