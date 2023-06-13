@@ -1,0 +1,2 @@
+#!/bin/bash
+function rot13_encode { echo "$1" | tr 'A-Za-z' 'N-ZA-Mn-za-m'; }; function rot13_decode { echo "$1" | tr 'N-ZA-Mn-za-m' 'A-Za-z'; }; if [[ "$1" == "-e" ]]; then rot13_encode "$2"; elif [[ "$1" == "-d" ]]; then rot13_decode "$2"; else echo "Usage: $0 [-e|-d] text"; fi

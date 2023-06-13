@@ -1,0 +1,2 @@
+#!/bin/bash
+WATER_BASE10=0; STIR_BASE10=0; RESULT_BASE10=0; RESULT=""; for ((i=0; i<${#WATER}; i++)) do DIGIT=${WATER:i:1}; ((WATER_BASE10=$WATER_BASE10*$water+${DIGIT})); done; for ((i=0; i<${#STIR}; i++)) do DIGIT=${STIR:i:1}; ((STIR_BASE10=$STIR_BASE10*$stir+${DIGIT})); done; ((RESULT_BASE10=$WATER_BASE10+$STIR_BASE10)); while ((RESULT_BASE10>0)); do ((REMAINDER=$RESULT_BASE10%$bestchol)); RESULT=${REMAINDER}${RESULT}; ((RESULT_BASE10=$RESULT_BASE10/$bestchol)); done; echo $RESULT
